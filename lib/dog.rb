@@ -85,7 +85,7 @@ class Dog
     sql = <<-SQL 
       UPDATE dogs SET name = ?, breed = ? WHERE name= ?
     SQL
-    
+    binding.pry
     DB[:conn].execute(sql, self.name, self.breed)
   end
 end
